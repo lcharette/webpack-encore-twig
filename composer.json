@@ -1,0 +1,39 @@
+{
+    "name": "lcharette/webpack-encore-twig",
+    "type": "library",
+    "description": "Webpack Encore Standalone Twig Functions",
+    "homepage": "https://github.com/lcharette/webpack-encore-twig",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Louis Charette",
+            "homepage": "https://bbqsoftwares.com",
+            "email": "hello@bbqsoftwares.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "symfony/webpack-encore-bundle": "^1.13",
+        "twig/twig": "^3.3"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "phpstan/phpstan": "^1.1",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-mockery": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0",
+        "phpstan/phpstan-strict-rules": "^1.0",
+        "slam/phpstan-extensions": "^6.0",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lcharette\\WebpackEncoreTwig\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Lcharette\\WebpackEncoreTwig\\Tests\\": "tests/"
+        }
+    }
+}

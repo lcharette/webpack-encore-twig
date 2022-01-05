@@ -1,0 +1,24 @@
+{
+  "entrypoints": {
+    "admin": {
+      "js": [
+        "/assets/runtime.js",
+        "/assets/vendors-node_modules_bootstrap-6feb83.js",
+        "/assets/admin.js"
+      ],
+      "css": [
+        "/assets/vendors-node_modules_bootstrap-6feb83.css",
+        "/assets/admin.css"
+      ]
+    },
+    "app": {
+        "js": [
+          "/assets/runtime.js",
+          "/assets/app.js"
+        ],
+        "css": [
+          "/assets/app.css"
+        ]
+      }
+  }
+}

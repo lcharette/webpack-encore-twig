@@ -1,0 +1,10 @@
+parameters:
+  level: max
+  ignoreErrors:
+    - '#Dynamic call to static method PHPUnit\\Framework\\.*#'
+includes:
+  - vendor/phpstan/phpstan-strict-rules/rules.neon
+  - vendor/phpstan/phpstan-deprecation-rules/rules.neon
+  - vendor/phpstan/phpstan-mockery/extension.neon
+  - vendor/phpstan/phpstan-phpunit/extension.neon
+  - vendor/slam/phpstan-extensions/conf/slam-rules.neon

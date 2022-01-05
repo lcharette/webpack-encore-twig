@@ -1,0 +1,22 @@
+{
+  "entrypoints": {
+    "admin": {
+      "js": [
+        "/assets/runtime.js",
+        "/assets/vendors-node_modules_bootstrap-6feb83.js",
+        "/assets/admin.js"
+      ],
+      "css": [
+        "/assets/vendors-node_modules_bootstrap-6feb83.css",
+        "/assets/admin.css"
+      ]
+    }
+  },
+  "integrity": {
+    "/assets/runtime.js": "sha384-m8b9i",
+    "/assets/vendors-node_modules_bootstrap-6feb83.js": "sha384-InNED",
+    "/assets/admin.js": "sha384-raZek",
+    "/assets/vendors-node_modules_bootstrap-6feb83.css": "sha384-HQdSI",
+    "/assets/admin.css": "sha384-rV+NX"
+  }
+}
