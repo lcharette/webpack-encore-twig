@@ -1,7 +1,7 @@
 # Webpack Encore Twig Integration
 
-[![Version](https://img.shields.io/packagist/v/lcharette/webpack-encore-twig)](https://github.com/lcharette/webpack-encore-twig/releases)
-![PHP](https://img.shields.io/packagist/php-v/lcharette/webpack-encore-twig/main?color=brightgreen)
+[![Version](https://img.shields.io/github/v/release/lcharette/webpack-encore-twig?sort=semver)](https://github.com/lcharette/webpack-encore-twig/releases)
+![PHP Version](https://img.shields.io/badge/php-%5E8.0-brightgreen)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 [![Build](https://img.shields.io/github/workflow/status/lcharette/webpack-encore-twig/Build/main?logo=github)](https://github.com/lcharette/webpack-encore-twig/actions)
 [![Codecov](https://codecov.io/gh/lcharette/webpack-encore-twig/branch/main/graph/badge.svg)](https://app.codecov.io/gh/lcharette/webpack-encore-twig/branch/main)
