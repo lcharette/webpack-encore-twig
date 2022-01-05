@@ -6,9 +6,9 @@ Webpack Encore Standalone Twig Functions. Allows usage of Webpack Encore in Twig
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 [![Build](https://img.shields.io/github/workflow/status/lcharette/webpack-encore-twig/Build/main?logo=github)](https://github.com/lcharette/webpack-encore-twig/actions)
 [![Codecov](https://codecov.io/gh/lcharette/webpack-encore-twig/branch/main/graph/badge.svg)](https://app.codecov.io/gh/lcharette/webpack-encore-twig/branch/main)
-[![StyleCI](https://github.styleci.io/repos/xxxx/shield?branch=develop-5.0&style=flat)](https://github.styleci.io/repos/xxx)
+[![StyleCI](https://github.styleci.io/repos/444619108/shield?branch=develop-5.0&style=flat)](https://github.styleci.io/repos/444619108)
 [![PHPStan](https://img.shields.io/github/workflow/status/lcharette/webpack-encore-twig/PHPStan/main?label=PHPStan)](https://github.com/lcharette/webpack-encore-twig/actions/workflows/PHPStan.yml)
-[![Donate](https://img.shields.io/badge/Donate-Buy%20Me%20a%20Coffee-blue.svg)](https://ko-fi.com/A7052ICP)
+[![Donate](https://img.shields.io/badge/Donate-Buy%20Me%20a%20Coffee-blue.svg)](https://ko-fi.com/lcharette)
 
 ## Installation
 ```
@@ -16,6 +16,8 @@ composer require lcharette/webpack-encore-twig
 ```
 
 ## Documentation & Usage
+
+(TODO)
 
 ## Other Documents
 - [Changelog](CHANGELOG.md)
