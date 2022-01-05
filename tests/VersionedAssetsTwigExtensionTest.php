@@ -10,9 +10,9 @@
 
 namespace Lcharette\WebpackEncoreTwig\Tests;
 
+use Lcharette\WebpackEncoreTwig\JsonManifest;
 use Lcharette\WebpackEncoreTwig\VersionedAssetsTwigExtension;
 use PHPUnit\Framework\TestCase;
-use Symfony\Component\Asset\VersionStrategy\JsonManifestVersionStrategy;
 use Twig\Environment;
 use Twig\Extension\ExtensionInterface;
 use Twig\Loader\FilesystemLoader;
@@ -22,7 +22,7 @@ use Twig\Loader\FilesystemLoader;
  */
 class VersionedAssetsTwigExtensionTest extends TestCase
 {
-    protected JsonManifestVersionStrategy $manifest;
+    protected JsonManifest $manifest;
     protected ExtensionInterface $extension;
     protected Environment $twig;
 
@@ -30,7 +30,7 @@ class VersionedAssetsTwigExtensionTest extends TestCase
     {
         parent::setUp();
 
-        $this->manifest = new JsonManifestVersionStrategy(__DIR__ . '/manifest.json');
+        $this->manifest = new JsonManifest(__DIR__ . '/manifest.json');
         $this->extension = new VersionedAssetsTwigExtension($this->manifest);
 
         // Create dumb Twig and test adding extension
