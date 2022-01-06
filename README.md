@@ -49,8 +49,6 @@ $twig = new Environment($loader);
 $twig->addExtension($extension);
 ```
 
-> When using a PSR Dependency Injection Container with autowiring, like [PHP-DI](https://php-di.org), you can define `EntrypointLookup` in your [definition factory](https://php-di.org/doc/php-definitions.html#factories) and simply inject `EntrypointsTwigExtension` into your class.
-
 Now, to render all of the `script` and `link` tags for a specific "entry" (e.g. `entry1`), you can:
 
 ```twig
@@ -119,6 +117,43 @@ In your Twig template, just wrap each path in the Twig `asset()` function like n
 
 ```twig
 <img src="{{ asset('build/images/logo.png') }}" alt="ACME logo">
+```
+
+### Dependency Injection & Autowiring
+
+When using a PSR Dependency Injection Container with autowiring, like [PHP-DI](https://php-di.org), you can define `EntrypointLookup` and `JsonManifest` in your [definition factory](https://php-di.org/doc/php-definitions.html#factories) via their respective interface (`EntrypointLookupInterface` and `JsonManifestInterface`). For example : 
+
+```php
+use Lcharette\WebpackEncoreTwig\JsonManifest;
+use Lcharette\WebpackEncoreTwig\JsonManifestInterface;
+use Symfony\WebpackEncoreBundle\Asset\EntrypointLookup;
+use Symfony\WebpackEncoreBundle\Asset\EntrypointLookupInterface;
+
+// ...
+
+return [
+    EntrypointLookupInterface::class => function () {
+        return new EntrypointLookup('./path/to/entrypoints.json');
+    },
+    JsonManifestInterface::class => function () {
+        return new JsonManifest('./path/to/manifest.json');
+    },
+];
+```
+
+`EntrypointsTwigExtension` and `VersionedAssetsTwigExtension` can then be injected into your other classes via the container :
+
+```php
+use Lcharette\WebpackEncoreTwig\EntrypointsTwigExtension;
+use Lcharette\WebpackEncoreTwig\VersionedAssetsTwigExtension;
+
+// ...
+
+$extension = $container->get(EntrypointsTwigExtension::class);
+$twig->addExtension($extension);
+
+$extension = $container->get(VersionedAssetsTwigExtension::class);
+$twig->addExtension($extension);
 ```
 
 ### Using Without Twig
