@@ -88,4 +88,19 @@ class EntrypointsTwigExtensionTest extends TestCase
         $result = $this->twig->createTemplate("{{ encore_entry_link_tags('admin') }}")->render();
         $this->assertSame(implode('', $expected), $result);
     }
+
+    public function testMissingFile(): void
+    {
+        $entryPoints = new EntrypointLookup(__DIR__ . '/entrypointsNotExist.json');
+        $tagRenderer = new TagRenderer($entryPoints);
+        $extension = new EntrypointsTwigExtension($entryPoints, $tagRenderer);
+
+        // Create dumb Twig and test adding extension
+        $loader = new FilesystemLoader();
+        $twig = new Environment($loader);
+        $twig->addExtension($extension);
+
+        $this->expectException(\Twig\Error\RuntimeError::class);
+        $twig->createTemplate("{{ encore_entry_link_tags('admin') }}")->render();
+    }
 }

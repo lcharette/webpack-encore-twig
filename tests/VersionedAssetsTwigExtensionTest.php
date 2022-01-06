@@ -60,4 +60,18 @@ class VersionedAssetsTwigExtensionTest extends TestCase
             ['assets/admin.js', 'assets/admin.js'], // Not in manifest.json. Will be returned as is.
         ];
     }
+
+    public function testMissingFile(): void
+    {
+        $manifest = new JsonManifest(__DIR__ . '/manifestNotFound.json');
+        $extension = new VersionedAssetsTwigExtension($manifest);
+
+        // Create dumb Twig and test adding extension
+        $loader = new FilesystemLoader();
+        $twig = new Environment($loader);
+        $twig->addExtension($extension);
+
+        $this->expectException(\Symfony\Component\Asset\Exception\RuntimeException::class);
+        $manifest->applyVersion('assets/admin.js');
+    }
 }
