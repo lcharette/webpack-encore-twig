@@ -12,7 +12,6 @@ declare(strict_types=1);
 
 namespace Lcharette\WebpackEncoreTwig;
 
-use Symfony\Component\Asset\VersionStrategy\VersionStrategyInterface;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
 
@@ -27,7 +26,7 @@ use Twig\TwigFunction;
 final class VersionedAssetsTwigExtension extends AbstractExtension
 {
     public function __construct(
-        private VersionStrategyInterface $manifest,
+        private JsonManifestInterface $manifest,
     ) {
     }
 

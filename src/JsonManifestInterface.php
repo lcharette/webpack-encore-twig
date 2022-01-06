@@ -12,13 +12,11 @@ declare(strict_types=1);
 
 namespace Lcharette\WebpackEncoreTwig;
 
-use Symfony\Component\Asset\VersionStrategy\JsonManifestVersionStrategy;
+use Symfony\Component\Asset\VersionStrategy\VersionStrategyInterface;
 
 /**
- * Alias for `Symfony\Component\Asset\VersionStrategy\JsonManifestVersionStrategy` class.
- *
- * Represent `manifest.json` file. Alias is used for better UX.
+ * Alias for `Symfony\Component\Asset\VersionStrategy\VersionStrategyInterface` class.
  */
-final class JsonManifest extends JsonManifestVersionStrategy implements JsonManifestInterface
+interface JsonManifestInterface extends VersionStrategyInterface
 {
 }
