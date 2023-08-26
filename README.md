@@ -3,10 +3,10 @@
 [![Version](https://img.shields.io/github/v/release/lcharette/webpack-encore-twig?sort=semver)](https://github.com/lcharette/webpack-encore-twig/releases)
 ![PHP Version](https://img.shields.io/badge/php-%5E8.0-brightgreen)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
-[![Build](https://img.shields.io/github/workflow/status/lcharette/webpack-encore-twig/Build/main?logo=github)](https://github.com/lcharette/webpack-encore-twig/actions)
+[![Build](https://img.shields.io/github/actions/workflow/status/lcharette/webpack-encore-twig/Build.yml?logo=github)](https://github.com/lcharette/webpack-encore-twig/actions)
 [![Codecov](https://codecov.io/gh/lcharette/webpack-encore-twig/branch/main/graph/badge.svg)](https://app.codecov.io/gh/lcharette/webpack-encore-twig/branch/main)
 [![StyleCI](https://github.styleci.io/repos/444619108/shield?branch=main&style=flat)](https://github.styleci.io/repos/444619108)
-[![PHPStan](https://img.shields.io/github/workflow/status/lcharette/webpack-encore-twig/PHPStan/main?label=PHPStan)](https://github.com/lcharette/webpack-encore-twig/actions/workflows/PHPStan.yml)
+[![PHPStan](https://img.shields.io/github/actions/workflow/status/lcharette/webpack-encore-twig/PHPStan.yml?label=PHPStan)](https://github.com/lcharette/webpack-encore-twig/actions/workflows/PHPStan.yml)
 [![Donate](https://img.shields.io/badge/Donate-Buy%20Me%20a%20Coffee-blue.svg)](https://ko-fi.com/lcharette)
 
 Webpack Encore Standalone Twig Functions. Allows usage of Webpack Encore in Twig Templates without Symfony. Optimized for PHP-DI style containers.
