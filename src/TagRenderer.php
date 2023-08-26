@@ -206,11 +206,11 @@ final class TagRenderer
         return implode(' ', array_map(
             static function (string $key, mixed $value) {
                 // allows for things like defer: true to only render "defer"
-                if ($value === true || $value === null) {
+                if ($value === true || $value === null || !is_scalar($value)) {
                     return $key;
                 }
 
-                return sprintf('%s="%s"', $key, htmlentities(strval($value)));
+                return sprintf('%s="%s"', $key, htmlentities((string) $value));
             },
             array_keys($attributesMap),
             $attributesMap

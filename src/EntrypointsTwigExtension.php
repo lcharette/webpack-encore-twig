@@ -49,6 +49,7 @@ final class EntrypointsTwigExtension extends AbstractExtension
         return [
             new TwigFunction('encore_entry_js_files', [$this->entrypoints, 'getJavaScriptFiles']),
             new TwigFunction('encore_entry_css_files', [$this->entrypoints, 'getCssFiles']),
+            //new TwigFunction('encore_entry_exists', [$this->entrypoints, 'entryExists']), // See : https://github.com/symfony/webpack-encore-bundle/pull/167
             new TwigFunction('encore_entry_script_tags', [$this->tagRenderer, 'renderWebpackScriptTags'], ['is_safe' => ['html']]),
             new TwigFunction('encore_entry_link_tags', [$this->tagRenderer, 'renderWebpackLinkTags'], ['is_safe' => ['html']]),
         ];
