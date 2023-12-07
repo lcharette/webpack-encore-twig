@@ -13,7 +13,7 @@
     ],
     "require": {
         "php": "^8.0",
-        "symfony/webpack-encore-bundle": "^1.13",
+        "symfony/webpack-encore-bundle": "^1.13|^2.1",
         "twig/twig": "^3.3"
     },
     "require-dev": {
